@@ -1,5 +1,5 @@
 # MIA-AR
-# Portfólio Individual — Aprendizagem por Reforço
+# Portfólio Individual - Aprendizagem por Reforço
 **Mestrado em Inteligência Artificial 2025/26**
 
 ---
@@ -42,9 +42,9 @@ O package de código providenciado inclui os seguintes módulos:
 
 * **agents**
   Algoritmos de aprendizagem utilizados no projeto, organizados em três subpastas:
-  * `prediction/` — algoritmos de predição da função de valor (MC, TD, n-step TD, Linear TD)
-  * `control/` — algoritmos de controlo (SARSA, n-step SARSA, MC Control, Linear SARSA, Torch SARSA, REINFORCE, Q-Learning)
-  * `planning/` — algoritmos de planeamento (MCTS)
+  * `prediction/` - algoritmos de predição da função de valor (MC, TD, n-step TD, Linear TD)
+  * `control/` - algoritmos de controlo (SARSA, n-step SARSA, MC Control, Linear SARSA, Torch SARSA, REINFORCE, Q-Learning)
+  * `planning/` - algoritmos de planeamento (MCTS)
 
 * **features**
   Funções de codificação de estado (tile coding para Windy Gridworld, one-hot para TicTacToe).
@@ -73,9 +73,9 @@ O package de código providenciado inclui os seguintes módulos:
 
 Implementação de três estratégias de exploração para o problema do bandido multi-braço com k=10 armas:
 
-- **ε-greedy** — com média aritmética simples (alpha=None) e passo constante (alpha fixo para ambientes não estacionários); testado com ε ∈ {0, 0.01, 0.1}
-- **UCB** (Upper Confidence Bound) — seleção de ação com bónus de exploração `c·√(ln t / N(a))`
-- **Gradient Bandit** — atualização de preferências H com e sem baseline de recompensa média
+- **ε-greedy** - com média aritmética simples (alpha=None) e passo constante (alpha fixo para ambientes não estacionários); testado com ε ∈ {0, 0.01, 0.1}
+- **UCB** (Upper Confidence Bound) - seleção de ação com bónus de exploração `c·√(ln t / N(a))`
+- **Gradient Bandit** - atualização de preferências H com e sem baseline de recompensa média
 
 ---
 
@@ -84,9 +84,9 @@ Implementação de três estratégias de exploração para o problema do bandido
 
 Implementação do framework MDP num Gridworld 4×4 determinístico com estados terminais em (0,0) e (3,3):
 
-- **Policy Evaluation** — Bellman expectation backup iterativo para política uniforme aleatória
-- **Value Iteration** — Bellman optimality backup até convergência
-- **Q-function** — avaliação iterativa de Q^π para verificação V^π(s) = Σ_a π(a|s)·Q^π(s,a)
+- **Policy Evaluation** - Bellman expectation backup iterativo para política uniforme aleatória
+- **Value Iteration** - Bellman optimality backup até convergência
+- **Q-function** - avaliação iterativa de Q^π para verificação V^π(s) = Σ_a π(a|s)·Q^π(s,a)
 - Exercícios: efeito de γ ∈ {0.5, 0.99}, ambiente com trap cell (−10), ambiente estocástico (0.8/0.1/0.1)
 
 ---
@@ -106,9 +106,9 @@ Aplicação de Policy Iteration a dois problemas:
 
 Predição da função de valor V^π para a política fixa de "hit até 20" no Blackjack:
 
-- **Monte Carlo** (every-visit) — `agents/prediction/monte_carlo.py`
-- **TD(0)** — `agents/prediction/td.py`
-- **n-step TD** — `agents/prediction/nstep_td.py` *(extensão de portfólio)*
+- **Monte Carlo** (every-visit) - `agents/prediction/monte_carlo.py`
+- **TD(0)** - `agents/prediction/td.py`
+- **n-step TD** - `agents/prediction/nstep_td.py` *(extensão de portfólio)*
 
 Outputs gerados: `blackjack_mc.png`, `blackjack_td0.png`, `blackjack_nstep.png`, `blackjack_nstep_minus_mc.png`
 
@@ -119,9 +119,9 @@ Outputs gerados: `blackjack_mc.png`, `blackjack_td0.png`, `blackjack_nstep.png`,
 
 Controlo model-free num ambiente Windy Gridworld com colunas de vento variável:
 
-- **SARSA** — on-policy TD control; `agents/control/sarsa.py`
-- **n-step SARSA** — `agents/control/n_step_sarsa.py`
-- **Monte Carlo Control** — `agents/control/monte_carlo.py`
+- **SARSA** - on-policy TD control; `agents/control/sarsa.py`
+- **n-step SARSA** - `agents/control/n_step_sarsa.py`
+- **Monte Carlo Control** - `agents/control/monte_carlo.py`
 
 Outputs gerados: `windy_gridworld_sarsa/`, `windy_gridworld_n_step_sarsa/`
 
@@ -132,9 +132,9 @@ Outputs gerados: `windy_gridworld_sarsa/`, `windy_gridworld_n_step_sarsa/`
 
 Substituição de tabelas Q por representações paramétricas no Windy Gridworld:
 
-- **Linear TD(0)** com tile coding — `agents/prediction/linear_td.py`
-- **Linear SARSA** (semi-gradient) — `agents/control/linear_sarsa.py`
-- **SARSA com PyTorch** — `agents/control/torch_sarsa.py`
+- **Linear TD(0)** com tile coding - `agents/prediction/linear_td.py`
+- **Linear SARSA** (semi-gradient) - `agents/control/linear_sarsa.py`
+- **SARSA com PyTorch** - `agents/control/torch_sarsa.py`
 
 Outputs gerados: `windy_gridworld_linear_td/`, `windy_gridworld_linear_sarsa/`, `windy_gridworld_torch_sarsa/`, `blackjack_control/`
 
@@ -145,11 +145,11 @@ Outputs gerados: `windy_gridworld_linear_td/`, `windy_gridworld_linear_sarsa/`, 
 
 Implementação do ambiente TicTacToe como classe `Environment` (exercício de portfólio):
 
-- `reset()` — reinicia o tabuleiro e define X como primeiro jogador
-- `available_actions(state)` — devolve índices das células vazias
-- `is_terminal(state)` — deteta vitória ou empate
-- `step(action)` — coloca a peça, calcula recompensa, troca o jogador
-- `render(state)` — imprime o tabuleiro com índices nas células vazias
+- `reset()` - reinicia o tabuleiro e define X como primeiro jogador
+- `available_actions(state)` - devolve índices das células vazias
+- `is_terminal(state)` - deteta vitória ou empate
+- `step(action)` - coloca a peça, calcula recompensa, troca o jogador
+- `render(state)` - imprime o tabuleiro com índices nas células vazias
 
 Codificação de estado: vetor one-hot de 27 dimensões (perspetiva relativa ao jogador atual) em `features/tictactoe.py`
 
@@ -160,8 +160,8 @@ Codificação de estado: vetor one-hot de 27 dimensões (perspetiva relativa ao 
 
 Algoritmo REINFORCE com política softmax linear aplicado ao TicTacToe:
 
-- `_probs()` — softmax mascarado sobre ações disponíveis
-- `update_episode()` — atualização pelo score function gradient
+- `_probs()` - softmax mascarado sobre ações disponíveis
+- `update_episode()` - atualização pelo score function gradient
 - Treino por self-play com mistura de adversário aleatório
 - Avaliação contra agente aleatório
 
@@ -174,10 +174,10 @@ Notebook: `TicTacToe_PolicyGradient.ipynb`
 
 Monte Carlo Tree Search aplicado ao TicTacToe:
 
-- **Seleção** — UCB1: `argmax [ Q(s,a) + c·√(ln N(s) / N(s,a)) ]`
-- **Expansão** — adiciona nó filho para ação não visitada
-- **Rollout** — política aleatória até estado terminal com `_apply`, `_available`, `_is_terminal`
-- **Backup** — `backpropagate(value)`: incrementa `visit_count`, acumula `value_sum`, recursão ao pai com `-value`
+- **Seleção** - UCB1: `argmax [ Q(s,a) + c·√(ln N(s) / N(s,a)) ]`
+- **Expansão** - adiciona nó filho para ação não visitada
+- **Rollout** - política aleatória até estado terminal com `_apply`, `_available`, `_is_terminal`
+- **Backup** - `backpropagate(value)`: incrementa `visit_count`, acumula `value_sum`, recursão ao pai com `-value`
 
 Notebook: `TicTacToe_MCTS.ipynb`
 
@@ -189,16 +189,16 @@ Notebook: `TicTacToe_MCTS.ipynb`
 Ambiente criado de raiz para explorar e comparar algoritmos de controlo model-free. Um agente parte do canto (0,0) e tem de recolher 3 tesouros numa grelha 5×5 evitando 3 armadilhas, no menor número de passos possível.
 
 **Formulação MDP:**
-- **Estado** — `(posição, tesouros_recolhidos)`: posição (linha, coluna) + conjunto de tesouros já recolhidos
-- **Ações** — U, D, L, R
-- **Recompensas** — +10 por tesouro, −5 por armadilha (termina episódio), −0.1 por passo
-- **Terminal** — todos os tesouros recolhidos, ou agente numa armadilha
-- **Espaço de estados** — 5×5 × 2³ = 200 estados distintos
+- **Estado** - `(posição, tesouros_recolhidos)`: posição (linha, coluna) + conjunto de tesouros já recolhidos
+- **Ações** - U, D, L, R
+- **Recompensas** - +10 por tesouro, −5 por armadilha (termina episódio), −0.1 por passo
+- **Terminal** - todos os tesouros recolhidos, ou agente numa armadilha
+- **Espaço de estados** - 5×5 × 2³ = 200 estados distintos
 
 **Algoritmos comparados:**
-- **SARSA** — on-policy TD; mais cauteloso perto das armadilhas porque aprende com a sua própria política exploratória
-- **Q-Learning** — off-policy TD; converge mais depressa mas pode sobrestimar regiões perigosas durante a exploração: `Q(s,a) ← Q(s,a) + α [r + γ max_a' Q(s',a') − Q(s,a)]`
-- **Monte Carlo Control** — first-visit; sem bias de bootstrap mas maior variância, aprende apenas no fim de cada episódio
+- **SARSA** - on-policy TD; mais cauteloso perto das armadilhas porque aprende com a sua própria política exploratória
+- **Q-Learning** - off-policy TD; converge mais depressa mas pode sobrestimar regiões perigosas durante a exploração: `Q(s,a) ← Q(s,a) + α [r + γ max_a' Q(s',a') − Q(s,a)]`
+- **Monte Carlo Control** - first-visit; sem bias de bootstrap mas maior variância, aprende apenas no fim de cada episódio
 
 Ficheiros criados: `envs/explorer.py`, `agents/control/q_learning.py`, `experiments/explorer.py`, `plots/explorer.py`, `scripts/run_explorer.py`
 
