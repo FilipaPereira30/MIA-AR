@@ -20,7 +20,7 @@ Portefólio individual/
 └── Portfolio/          ← Projeto consolidado + Explorer (problema novo)
 ```
 
-Cada pasta `Aula_XX/` é um snapshot do estado do projeto no final dessa aula. As pastas de P1 a P3 contêm scripts standalone (formato Colab), enquanto P4 a P9 seguem a estrutura modular do pacote `mia_rl`.
+Cada pasta `Aula_XX/` é um snapshot do estado do projeto no final dessa aula. As pastas de P1 a P3 contêm scripts standalone (formato Colab), enquanto P4 a P9 seguem a estrutura modular do `mia_rl`.
 
 ---
 
