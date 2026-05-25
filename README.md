@@ -66,9 +66,9 @@ O package de código providenciado inclui os seguintes módulos:
 
 ---
 
-## Práticos realizados
+## Exercicios práticos realizados
 
-### Prático 1 — K-Armed Bandits
+### Prático 1 - K-Armed Bandits
 `Aula_10_fev/kbandits_incomplete.py`
 
 Implementação de três estratégias de exploração para o problema do bandido multi-braço com k=10 armas:
@@ -79,7 +79,7 @@ Implementação de três estratégias de exploração para o problema do bandido
 
 ---
 
-### Prático 2 — MDP e Gridworld
+### Prático 2 - MDP e Gridworld
 `Aula_24_fev/mdp_gridworld_incomplete.py`
 
 Implementação do framework MDP num Gridworld 4×4 determinístico com estados terminais em (0,0) e (3,3):
@@ -91,7 +91,7 @@ Implementação do framework MDP num Gridworld 4×4 determinístico com estados 
 
 ---
 
-### Prático 3 — Programação Dinâmica
+### Prático 3 - Programação Dinâmica
 `Aula_3_mar/practical3_gridworld_incomplete.py` e `practical3_carrental_incomplete.py`
 
 Aplicação de Policy Iteration a dois problemas:
@@ -101,7 +101,7 @@ Aplicação de Policy Iteration a dois problemas:
 
 ---
 
-### Prático 4 — Blackjack: Predição
+### Prático 4 - Blackjack: Predição
 `Aula_10_mar/mia_rl/`
 
 Predição da função de valor V^π para a política fixa de "hit até 20" no Blackjack:
@@ -114,7 +114,7 @@ Outputs gerados: `blackjack_mc.png`, `blackjack_td0.png`, `blackjack_nstep.png`,
 
 ---
 
-### Prático 5 — Windy Gridworld: Controlo
+### Prático 5 - Windy Gridworld: Controlo
 `Aula_17_mar/mia_rl/`
 
 Controlo model-free num ambiente Windy Gridworld com colunas de vento variável:
@@ -127,7 +127,7 @@ Outputs gerados: `windy_gridworld_sarsa/`, `windy_gridworld_n_step_sarsa/`
 
 ---
 
-### Prático 6 — Aproximação de Funções
+### Prático 6 - Aproximação de Funções
 `Aula_24_mar/mia_rl/`
 
 Substituição de tabelas Q por representações paramétricas no Windy Gridworld:
@@ -140,7 +140,7 @@ Outputs gerados: `windy_gridworld_linear_td/`, `windy_gridworld_linear_sarsa/`, 
 
 ---
 
-### Prático 7 — TicTacToe Environment
+### Prático 7 - TicTacToe Environment
 `Aula_7_abr/mia_rl/`
 
 Implementação do ambiente TicTacToe como classe `Environment` (exercício de portfólio):
@@ -155,7 +155,7 @@ Codificação de estado: vetor one-hot de 27 dimensões (perspetiva relativa ao 
 
 ---
 
-### Prático 8 — Policy Gradient: REINFORCE
+### Prático 8 - Policy Gradient: REINFORCE
 `Aula_14_abr/mia_rl/`
 
 Algoritmo REINFORCE com política softmax linear aplicado ao TicTacToe:
@@ -169,7 +169,7 @@ Notebook: `TicTacToe_PolicyGradient.ipynb`
 
 ---
 
-### Prático 9 — Planning: MCTS
+### Prático 9 - Planning: MCTS
 `Aula_21_abr/mia_rl/`
 
 Monte Carlo Tree Search aplicado ao TicTacToe:
@@ -183,7 +183,7 @@ Notebook: `TicTacToe_MCTS.ipynb`
 
 ---
 
-### Problema novo — Explorer (Grelha 5×5)
+### Problema novo - Explorer (Grelha 5×5)
 `Portfolio/mia_rl/`
 
 Ambiente criado de raiz para explorar e comparar algoritmos de controlo model-free. Um agente parte do canto (0,0) e tem de recolher 3 tesouros numa grelha 5×5 evitando 3 armadilhas, no menor número de passos possível.
